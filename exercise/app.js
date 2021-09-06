@@ -11,10 +11,8 @@ query.innerText = "Query too";
 // console.log(query);
 
 function handelQueryClick() {
-  console.log("title clicked");
-  query.innerText = "Query you";
+  const clickedClass = "clicked";
+  query.classList.toggle(clickedClass);
 }
-
-query.style.color = "blue";
 
 query.addEventListener("click", handelQueryClick);
