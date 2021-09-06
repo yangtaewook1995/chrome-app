@@ -1,18 +1,29 @@
-const title = document.getElementById("title");
-const hellos = document.getElementsByClassName("some");
-const query = document.querySelector(".something h1");
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+const greeting = document.querySelector("#greeting");
 
-title.innerText = "Got you";
-hellos[0].innerText = "Test you";
-query.innerText = "Query too";
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-// console.log(title);
-// console.log(hellos);
-// console.log(query);
-
-function handelQueryClick() {
-  const clickedClass = "clicked";
-  query.classList.toggle(clickedClass);
+function paingGreetings(userName) {
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerText = "Hello " + userName;
 }
 
-query.addEventListener("click", handelQueryClick);
+function onLoginSubmit(event) {
+  event.preventDefault();
+  const userName = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, userName);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  paingGreetings(userName);
+}
+
+const savedUserName = localStorage.getItem(USERNAME_KEY);
+
+if (savedUserName == null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  paingGreetings(savedUserName);
+}
