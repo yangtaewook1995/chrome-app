@@ -1,3 +1,145 @@
 .hidden {
   display: none;
 }
+
+.body {
+  margin: 0 auto;
+  display: flex;
+  /* text-align: center; */
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  z-index: -5;
+  filter: brightness(70%);
+}
+
+#login-form {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  z-index: 2;
+  text-align: center;
+  opacity: 90%;
+}
+
+#login-form span {
+  display: block;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#login-form input {
+  border: none;
+  margin-top: 30px;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 3px solid white;
+  width: 300px;
+}
+
+#login-form input:focus {
+  margin-top: 30px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 3px solid white;
+  color: white;
+  width: 300px;
+}
+
+#clock {
+  margin-top: 350px;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  font-size: 150px;
+}
+
+#greeting {
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+#todo-form {
+  position: absolute;
+  top: 70%;
+  right: 30px;
+  z-index: 2;
+  color: white;
+}
+
+#todo-form input {
+  border: none;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 300px;
+}
+
+#todo-form input::placeholder {
+  color: white;
+  opacity: 60%;
+}
+
+#todo-form input:focus {
+  outline: none;
+  color: white;
+  width: 300px;
+}
+
+#todo-list {
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  right: 100px;
+  z-index: 2;
+  color: white;
+}
+
+#todo-list li {
+  list-style: none;
+  z-index: 2;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+#todo-list button {
+  list-style: none;
+  position: absolute;
+  font-size: 20px;
+  margin-left: 5px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#todo-list button:hover {
+  cursor: pointer;
+}
+
+#quote {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 20px;
+  color: white;
+}
+
+#weather {
+  list-style: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  color: white;
+}

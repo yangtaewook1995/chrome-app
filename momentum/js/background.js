@@ -9,7 +9,7 @@ const randNum = Math.floor(Math.random() * 4);
 const randImage = images[randNum];
 
 const bgImage = document.createElement("img");
-
+bgImage.className = "background";
 bgImage.src = "img/" + randImage;
 
 document.body.appendChild(bgImage);
